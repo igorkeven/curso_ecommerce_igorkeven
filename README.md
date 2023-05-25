@@ -42,16 +42,16 @@ https://youtu.be/Cl_y3ydtjNo
    git clone https://github.com/igorkeven/curso_ecommerce_igorkeven
    
 2. Navegue até o diretório do projeto:  
-
-  - cd curso_ecommerce_igorkeven
+    ```bash
+   cd curso_ecommerce_igorkeven
 
 3. Instale as dependências:
-
-  - pip install -r requirements.txt
+    ```bash
+   pip install -r requirements.txt
 
 4. Execução:
-
-  - python main.py
+    ```bash
+   python main.py
 
 5. Acesse o e-commerce no seu navegador em http://localhost:5000
 

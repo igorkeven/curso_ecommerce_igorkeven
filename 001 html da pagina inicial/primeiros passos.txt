@@ -1,0 +1,67 @@
+
+
+
+
+
+
+
+1º ) Instalar o visual studio code
+
+1. Abra seu navegador de internet e acesse o site oficial do Visual Studio Code: https://code.visualstudio.com/
+2. Na página inicial, clique no botão "Download" localizado no canto superior direito da tela.
+3. A página de downloads será aberta e automaticamente identificará o sistema operacional do seu computador. Clique no botão "Download" referente ao Windows.
+4. O download do instalador começará automaticamente. Quando o download estiver completo, abra o arquivo executável.
+5. O assistente de instalação será aberto. Siga as instruções para instalar o Visual Studio Code no seu computador.
+6. Na tela de seleção de componentes, deixe todas as opções selecionadas e clique em "Next".
+7. Na tela de seleção de local de instalação, mantenha o diretório padrão selecionado e clique em "Next".
+8. Na tela de seleção de atalhos, deixe as opções padrão selecionadas e clique em "Next".
+9. Na tela de confirmação de instalação, clique em "Install".
+10. Aguarde a conclusão da instalação. Quando finalizar, clique em "Finish".
+	O Visual Studio Code estará instalado em seu computador. Você pode abri-lo através do menu Iniciar ou clicando no ícone na área de trabalho.
+
+
+2º ) Instalar o Python
+
+1. Abra seu navegador de internet e acesse o site oficial do Python: https://www.python.org/
+2. Na página inicial, clique no botão "Downloads" localizado no menu principal.
+3. Na página de downloads, role a página até encontrar a seção "Python Releases for Windows". Escolha a versão mais recente do Python para Windows e clique no link de download.
+4. O download do instalador começará automaticamente. Quando o download estiver completo, abra o arquivo executável.
+5. O assistente de instalação será aberto. Na tela de boas-vindas, clique em "Next".
+6. Na tela de acordo de licença, leia o contrato de licença e, se concordar, marque a opção "I Agree" e clique em "Next".
+7. Na tela de seleção de componentes, deixe todas as opções selecionadas e clique em "Next".
+8. Na tela de seleção de local de instalação, mantenha o diretório padrão selecionado e clique em "Next".
+9. Na tela de seleção de atalhos, deixe as opções padrão selecionadas e clique em "Next".
+10. Na tela de seleção de recursos adicionais, deixe todas as opções selecionadas e clique em "Next".
+11. Na tela de configuração avançada, deixe as opções padrão selecionadas e clique em "Install".
+12. Aguarde a conclusão da instalação. Quando finalizar, clique em "Finish".
+	O Python estará instalado em seu computador. Para verificar se a instalação foi bem-sucedida, abra o Prompt de Comando e digite "python --version". Se a versão do Python for exibida, a instalação foi bem-sucedida.
+
+3º ) Instalar o flask
+
+1. Abra o Prompt de Comando e certifique-se de que o Python está instalado e configurado corretamente no seu computador. Digite "python --version" e verifique se a versão do Python é exibida. Se não for, instale o Python primeiro.
+2. Digite "pip install flask" no Prompt de Comando e pressione Enter para instalar o Flask.
+3. Aguarde até que o processo de instalação seja concluído.
+4. Depois que a instalação estiver concluída, crie um novo arquivo Python na pasta do seu projeto e importe o Flask.
+	Você pode começar a usar o Flask em seu projeto.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Igor Keven Login</title>
+    <link rel="stylesheet" href="/static/css/cadastro.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Página Inicial</a></li>
+                
+                <li class="btnlogin"><a href="">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form id="tipoCadastro">
+        <h1> Cadastro </h1>
+        <label for="selecionarTipoCadastro">Você quer vender ou comprar?</label>
+        <select name="selecionarTipoCadastro" id="selecionarTipoCadastro">
+            <option value="vendedor">Vendedor</option>
+            <option value="cliente">Cliente</option>
+        </select>
+        <button type="submit">Continuar</button>
+    </form>
+
+    <h1 id="tituloVendedor">Crie sua conta e exponha seus produtos para venda</h1>
+    <h1 id="tituloCliente">Cadastre-se gratuitamente e aproveite as compras!</h1>
+
+    <form action="#" id="vendedorCadastro"  method="post">
+        <h1>Cadastro Vendedor</h1>
+        <p id="msgErro">AS SENHAS NÃO SÃO IGUAIS!</p>
+        <label for="emailVendedor">Email</label>
+        <input type="email" name="emailVendedor" id="emailVendedor">
+        <label for="nomeVendedor">Nome</label>
+        <input type="text" name="nomeVendedor" id="nomeVendedor">
+        <label for="pixVendedor">Chave-PIX</label>
+        <input type="text" name="pixVendedor" id="pixVendedor">
+        <label for="senhaVendedor">Senha</label>
+        <input type="password" name="senhaVendedor" id="senhaVendedor">
+        <label for="repetirSenhaVendedor">Repetir senha</label>
+        <input type="password" name="repetirSenhaVendedor" id="repetirSenhaVendedor">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <form action="#" id="clienteCadastro"  method="post">
+        <h1>Cadastro Cliente</h1>
+        <p id="msgErro">AS SENHAS NÃO SÃO IGUAIS!</p>
+        <label for="emailcliente">Email</label>
+        <input type="email" name="emailclienter" id="emailcliente">
+        <label for="nomecliente">Nome</label>
+        <input type="text" name="nomecliente" id="nomecliente">
+        <label for="senhacliente">Senha</label>
+        <input type="password" name="senhacliente" id="senhacliente">
+        <label for="repetirSenhacliente">Repetir senha</label>
+        <input type="password" name="repetirSenhacliente" id="repetirSenhacliente">
+        <input type="submit" value="Enviar">
+    </form>
+
+
+
+
+
+    <footer>
+        <p> &copy; 2023 Mercado do Igor Keven </p>
+    </footer>
+
+</body>
+</html>

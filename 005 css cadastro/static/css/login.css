@@ -1,0 +1,65 @@
+
+
+@import url(/static/css/home.css);
+
+
+.titulo {
+    position: fixed;
+    margin: 5% 25%;
+}
+
+form {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 10% auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+input[type="password"], input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+}
+
+input[type="submit"]{
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: #0c440e;
+}
+
+.esqueceu-senha{
+    font-size: 14px;
+    float: right;
+    margin-top: 15px;
+}
+
+
+.btncadastrar{
+    position: absolute;
+    top: 5;
+    right: 0;
+    margin-right: 7%;
+}

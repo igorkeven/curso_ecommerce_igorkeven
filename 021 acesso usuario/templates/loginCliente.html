@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Igor Keven Login</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Página Inicial</a></li>
+                <li class="btncadastrar"><a href="/cadastrar">Cadastrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 class="titulo">Olá, Acesse sua conta e boas compras </h1>
+
+    <form action="/acessoCliente" method="post">
+        <h1>Login Cliente</h1>
+
+        <label for="emailCliente">Email</label>
+        <input type="email" name="emailCliente" id="emailCliente" placeholder="Digite seu email" required>
+        <label for="senhaCliente">Senha</label>
+        <input type="password" name="senhaCliente" id="senhaCliente" placeholder="Digite sua senha" required>
+        <input type="submit" value="Entrar">
+        <div class="esqueceu-senha">
+            Esqueceu sua senha? <a href="#"> Clique aqui</a>
+        </div>
+    </form>
+
+
+
+
+    <footer>
+        <p> &copy; 2023 Mercado do Igor Keven </p>
+    </footer>
+
+</body>
+</html>

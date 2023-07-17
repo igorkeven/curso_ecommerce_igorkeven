@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Igor Keven perfil</title>
+    <link rel="stylesheet" href="/static/css/cliente.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Página Inicial</a></li>
+                <li class="sair"><a href="">sair</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="titulo" id="titulo"> Meu Carrinho </h1>
+
+
+    <main>
+        <aside class="perfil">
+            
+            <img src="/static/arquivos/usuario.png" alt="foto do vendedor " title="Enviar foto" id="foto_vendedor">
+            <br>
+            <h1 class="nome">{{ nome }}</h1>
+            <h3 class="menu_perfil" id="escolha_formulario_senha"> Mudar senha</h3>
+            <h3 class="menu_perfil" id="btnHistorico">Historico de Compras</h3>
+            <h3 class="menu_perfil" id="paginaInicial">Ir para as Compras</h3>
+            <h3 class="menu_perfil" id="Meus_pedidos">Meus Pedidos</h3>
+            <h3>Total a Pagar : R$120.00</h3>
+            <h3 class="menu_perfil" id="finalizarCompra">Finalizar Compra</h3>
+            <h3 class="apagar_conta" id="apagar_conta">Apagar minha conta</h3>
+        </aside>
+
+     
+
+        <div id="produtos" class="produtos">
+            <!-- aqui fica os produtos -->
+
+        </div>
+
+        <div id="formulario_senha">
+            <form action="#" id="formMudarSenha" method="post">
+                <label for="novaSenha">Nova Senha</label>
+                <input type="password" name="novaSenha" id="novaSenha" placeholder="Digite a nova senha" required>
+                <label for="repetirNovaSenha">Repetir Senha</label>
+                <input type="password" name="repetirNovaSenha" id="repetirNovaSenha" placeholder="Repitir a senha" required>
+                <input type="hidden" name="dadosUsuario" value=" aqui os dados do usuario">
+                <input type="submit" value="Salvar">
+            </form>
+
+        </div>
+
+        <div id="modal_apagarConta" class="modal_apagarConta">
+            <div class="modal-content">
+                <h4>Tem certeza que deseja apagar sua conta?</h4>
+                <p class="apagarAlerta">Essa opção é permanente e não pode ser desfeita.</p>
+                <div class="modal-buttons">
+                    <button id="cancelarApagarConta">Cancelar</button>
+                    <form action="#" method="post">
+                        <input type="hidden" name="emailUsuario" value=" aqui o email do usuario">
+                        <input type="submit"  id="confirmarApagarConta" value="Confirmar">
+                    </form>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="historico" id="historico">
+            <!-- aqui mostra os produtos com compras ja finalizadas -->
+
+        </div>
+    </main>
+
+
+    <footer>
+        <p> &copy; 2023 Mercado do Igor Keven </p>
+    </footer>
+<script src="/static/javascript/cliente.js"></script>
+<script>
+document.getElementById("foto_vendedor").addEventListener("click", function() {
+    if (this.src.includes("usuario.png")) {
+        // usuário ainda não tem uma imagem definida, permitir o envio da foto!
+        
+    }else{
+        // usuario ja tem uma foto, solicitar confirmação de mudança
+        if (confirm("Você tem certeza que deseja mudar sua foto?")) {
+            // usuario confirmou , pode enviar nova foto
+            
+        }else{
+            // usuario cancelou a mudança da foto
+            return;
+        }
+    }
+
+    var modal = document.createElement("div");
+    modal.classList.add("modal");
+    modal.innerHTML = `
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form action="/enviarFoto" enctype="multipart/form-data" method="post">
+            <input type="file" name="foto" id="foto">
+            <input type="hidden" name="emailUsuario" value="{{ email }}">
+            <input type="hidden" name="rota" value="/cliente">
+            <input type="submit" value="Enviar">
+        </form>
+
+    </div>
+    
+    `;
+    document.body.appendChild(modal);
+    var BotaoFechar = modal.querySelector(".close");
+    BotaoFechar.addEventListener("click", ()=>{
+        modal.remove();
+    })
+
+
+});
+
+const finalizarCompra = document.querySelector("#finalizarCompra");
+
+
+finalizarCompra.addEventListener("click", ()=>{
+    var modal = document.createElement("div");
+    modal.classList.add("modal");
+    modal.innerHTML = `
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form action="#" enctype="multipart/form-data" method="post">
+            
+            <input type="hidden" name="emailUsuario" value="{{ email }}">
+            <input type="submit" value="Pagar">
+        </form>
+
+    </div>
+
+    
+    `;
+    document.body.appendChild(modal);
+    var BotaoFechar = modal.querySelector(".close");
+    BotaoFechar.addEventListener("click", ()=>{
+        modal.remove();
+    })
+})
+
+
+</script>
+</body>
+</html>

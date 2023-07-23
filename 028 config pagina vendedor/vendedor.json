@@ -1,0 +1,10 @@
+[
+    {
+        "email": "teste@teste.com",
+        "nome": "teste vendedor 1",
+        "senha": "123",
+        "chavePIX": "123",
+        "foto": "Foto_perfil_teste@teste.com.jpg",
+        "produtos": {}
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "email": "igor@igor.com",
+        "nome": "igor keven",
+        "senha": "123",
+        "chavePIX": "123",
+        "foto": "",
+        "produtos": {}
+    },
+    {
+        "email": "teste@teste.com",
+        "nome": "teste vendedor 1",
+        "senha": "123456789",
+        "chavePIX": "123",
+        "foto": "",
+        "produtos": {}
+    }
+]

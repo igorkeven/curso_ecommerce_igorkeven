@@ -1,0 +1,29 @@
+[
+    {
+        "email": "teste@teste.com",
+        "nome": "teste vendedor 1",
+        "senha": "123",
+        "chavePIX": "123",
+        "foto": "Foto_perfil_teste@teste.com.jpg",
+        "produtos": {
+            "igor keven": {
+                "imagem": "foto_produtoteste@teste.com_igor keven.jpg",
+                "descricao": "eu  mesmo, estou a venda.",
+                "preco": 10,
+                "quantidade_vendida": 0
+            },
+            "banana ma\u00e7\u00e3": {
+                "imagem": "foto_produtoteste@teste.com_banana ma\u00e7\u00e3.png",
+                "descricao": "banana do tipo ma\u00e7\u00e3",
+                "preco": 50,
+                "quantidade_vendida": 0
+            },
+            "banana nanica": {
+                "imagem": "foto_produtoteste@teste.com_banana nanica.jpg",
+                "descricao": "banana do tipo nanica",
+                "preco": 100,
+                "quantidade_vendida": 0
+            }
+        }
+    }
+]

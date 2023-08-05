@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Igor Keven</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Página Inicial</a></li>
+                <li><a href="/vendedor">Perfil do vendedor</a></li>
+                <li class="btnlogin"><a href="/cliente">Perfil do Cliente</a></li>
+                <li class="btnlogin"><a href="/loginCliente">Login</a></li>
+                <li class="btncadastrar"><a href="/cadastrar">Cadastrar</a></li>
+                <li class="carrinho"><a href="/cliente"><img src="/static/arquivos/carrinho.png" alt=""><span class="text">{% if logado %} Meu Carrinho {% else %} Faça Login {% endif %} </span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="busca">
+        <h2>Pesquisar Produtos</h2>
+        <form>
+            <input type="text"  id="campo-busca" placeholder="Pesquise por nome, categoria ou palavra-chave">
+            <button type="submit">Buscar</button>
+        </form>
+
+
+    </section>
+    <section id="destaque" class="destaque">
+        <h2>Produtos em destaque mais vendido</h2>
+        <div class="produtos">
+            <!-- aqui vamos colocar os produtos em destaque -->
+
+        </div>
+
+    </section>
+    <section id="produtos" >
+        <h2>Todos os produtos</h2>
+        <div class="produtos">
+            <!-- aqui vamos colocar todos os produtos -->
+
+            {% for vendedor in listaDeVendedor %}
+                {% if vendedor['produtos'] %}
+                    {% for produto, dados in vendedor['produtos'].items() %}
+                        <div class="produto">
+                            <img src="{{url_for('static', filename='produtos/'+ dados['imagem'] )}}" alt="imagem do produto:{{produto}}" width="200">
+                            <h2>{{produto}}</h2>
+                            <p>{{dados['descricao']}}</p>
+                            <p>Preço: R$ {{dados['preco']}}</p>
+                            <p>Vendedor: {{vendedor['nome']}}</p>
+
+                            {% if logado %}
+                            <form action="/adicionarCarrinho" method="post" >
+                            {% else %}
+                            <form action="/loginCliente" method="get" >
+                            {% endif %}
+
+                                <input type="hidden" name="nome_produto" value="{{produto}}">
+                                <input type="hidden" name="imagem_produto" value="{{dados['imagem']}}">
+                                <input type="hidden" name="preco_produto" value="{{dados['preco']}}">
+                                <input type="hidden" name="descricao_produto" value="{{dados['descricao']}}">
+                                <input type="hidden" name="email_vendedor" value="{{vendedor['email']}}">
+                                <input type="hidden" name="pagina_retorno" value="/">
+
+
+                                {% if logado %}
+                                    
+                                    {% for cliente in listaDeClientes %}
+                                        {% if usuarioLogado == cliente['email'] %}
+                                            {% if produto in cliente['carrinho']  %}
+                                                <input type="submit" value="Item no Carrinho&#10;Quantidade: {{cliente['carrinho'][produto]['quantidade']}}&#10;Adicionar + 1">
+                                            {% else %}
+                                                <input type="submit" value="Adicionar ao Carrinho">
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                {% else %}
+                                <input type="submit" value="Faça Login">
+
+                                {% endif %}
+                            </form>
+                            <br>
+
+                            {% if logado %}
+                                {% for cliente in listaDeClientes %}
+                                    {% if cliente['carrinho'][produto] %}
+                                        <form action="/remover_carrinho" method="post">
+                                            <input type="hidden" name="nome_produto" value="{{produto}}">
+                                            <input type="hidden" name="pagina_retorno" value="/">
+                                            <input type="submit" value="Remover do Carrinho">
+                                        </form>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+
+
+
+
+
+                        </div>
+
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+
+
+
+
+
+
+
+
+        </div>
+
+    </section>
+    <footer>
+        <p> &copy; 2023 Mercado do Igor Keven </p>
+    </footer>
+
+</body>
+</html>

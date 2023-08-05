@@ -1,0 +1,56 @@
+[
+    {
+        "email": "teste@teste.com",
+        "nome": "teste vendedor 1",
+        "senha": "123",
+        "chavePIX": "123",
+        "foto": "Foto_perfil_teste@teste.com.jpg",
+        "produtos": {
+            "banana nanica": {
+                "imagem": "foto_produtoteste@teste.com_banana nanica.jpg",
+                "descricao": "banana do tipo nanica",
+                "preco": 100,
+                "quantidade_vendida": 3
+            },
+            "banana ": {
+                "imagem": "foto_produtoteste@teste.com_banana ma\u00e7\u00e3.png",
+                "descricao": "banana somente",
+                "preco": 500.0,
+                "quantidade_vendida": 6
+            }
+        }
+    },
+    {
+        "email": "igor@igor.com",
+        "nome": "igor keven",
+        "senha": "123",
+        "chavePIX": "123456789",
+        "foto": "Foto_perfil_igor@igor.com.jpg",
+        "produtos": {
+            "banana prata": {
+                "imagem": "foto_produtoigor@igor.com_banana prata.jpg",
+                "descricao": "banana do tipo prata",
+                "preco": 120.0,
+                "quantidade_vendida": 2
+            },
+            "bicicleta velha e quebrada": {
+                "imagem": "foto_produtoigor@igor.com_bicicleta velha e quebrada.jpg",
+                "descricao": "uma bicicleta velha e quebrada , cheia de ferrugem.",
+                "preco": 2000.0,
+                "quantidade_vendida": 0
+            },
+            "urso ": {
+                "imagem": "foto_produtoigor@igor.com_urso .jpg",
+                "descricao": "um urso de brinquedo com c\u00e2mera escondida .",
+                "preco": 700.0,
+                "quantidade_vendida": 3
+            },
+            "notbook Dell": {
+                "imagem": "foto_produtoigor@igor.com_notbook Dell.jpg",
+                "descricao": "notbook i3 com 267 mb ram , 500mb hd",
+                "preco": 5000.0,
+                "quantidade_vendida": 2
+            }
+        }
+    }
+]

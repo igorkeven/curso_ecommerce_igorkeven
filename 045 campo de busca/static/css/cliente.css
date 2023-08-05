@@ -1,0 +1,46 @@
+
+
+
+@import url(/static/css/vendedor.css);
+
+
+.menu_perfil{
+    font-size: 18px;
+}
+
+.valor_finalizar_compras{
+    font-weight: bold;
+    font-size: 26px;
+}
+
+
+#historico{
+    display: none;
+    margin: 5% 20%;
+}
+
+#historico #produto{
+    margin-bottom: 60px;
+    padding: 20px;
+    width: calc(25% - 20px);
+    display: inline-block;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.historico_compra{
+    border: 2px solid black;
+    margin-bottom: 50px;
+}
+
+#historico #produto p{
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.compra_realizada{
+    display: flex;
+    justify-content: center;
+}

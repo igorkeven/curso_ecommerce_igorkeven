@@ -1,0 +1,65 @@
+[
+    {
+        "nome": "teste 1 ",
+        "email": "teste@teste.com",
+        "senha": "123",
+        "foto": "",
+        "carrinho": {},
+        "total_preco": 0.0,
+        "historico": [
+            {
+                "compras_finalizadas": {
+                    "banana ": {
+                        "imagem": "foto_produtoteste@teste.com_banana ma\u00e7\u00e3.png",
+                        "descricao": "banana somente",
+                        "preco": 500.0,
+                        "email_vendedor": "teste@teste.com",
+                        "quantidade": 2
+                    },
+                    "banana prata": {
+                        "imagem": "foto_produtoigor@igor.com_banana prata.jpg",
+                        "descricao": "banana do tipo prata",
+                        "preco": 120.0,
+                        "email_vendedor": "igor@igor.com",
+                        "quantidade": 2
+                    },
+                    "banana nanica": {
+                        "imagem": "foto_produtoteste@teste.com_banana nanica.jpg",
+                        "descricao": "banana do tipo nanica",
+                        "preco": 100.0,
+                        "email_vendedor": "teste@teste.com",
+                        "quantidade": 1
+                    }
+                },
+                "compra_feita_em": "19-05-23 12:05:05"
+            }
+        ]
+    },
+    {
+        "nome": "teste numero 2",
+        "email": "teste2@2.com",
+        "senha": "456",
+        "foto": "",
+        "carrinho": {},
+        "total_preco": 0.0,
+        "historico": {}
+    },
+    {
+        "nome": "igor keven",
+        "email": "igor@igor.com",
+        "senha": "123",
+        "foto": "Foto_perfil_igor@igor.com.jpg",
+        "carrinho": {},
+        "total_preco": 0.0,
+        "historico": {}
+    },
+    {
+        "nome": "igor",
+        "email": "igor@teste.com",
+        "senha": "123",
+        "foto": "",
+        "carrinho": {},
+        "total_preco": 0.0,
+        "historico": {}
+    }
+]

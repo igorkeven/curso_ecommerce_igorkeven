@@ -1,0 +1,38 @@
+[
+    {
+        "email": "teste@teste.com",
+        "nome": "teste vendedor 1",
+        "senha": "123",
+        "chavePIX": "123",
+        "foto": "Foto_perfil_teste@teste.com.jpg",
+        "produtos": {
+            "banana nanica": {
+                "imagem": "foto_produtoteste@teste.com_banana nanica.jpg",
+                "descricao": "banana do tipo nanica",
+                "preco": 100,
+                "quantidade_vendida": 1
+            },
+            "banana ": {
+                "imagem": "foto_produtoteste@teste.com_banana ma\u00e7\u00e3.png",
+                "descricao": "banana somente",
+                "preco": 500.0,
+                "quantidade_vendida": 2
+            }
+        }
+    },
+    {
+        "email": "igor@igor.com",
+        "nome": "igor keven",
+        "senha": "123",
+        "chavePIX": "123456789",
+        "foto": "",
+        "produtos": {
+            "banana prata": {
+                "imagem": "foto_produtoigor@igor.com_banana prata.jpg",
+                "descricao": "banana do tipo prata",
+                "preco": 120.0,
+                "quantidade_vendida": 2
+            }
+        }
+    }
+]

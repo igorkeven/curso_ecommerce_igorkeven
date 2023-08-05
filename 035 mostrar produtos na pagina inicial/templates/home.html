@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Igor Keven</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Página Inicial</a></li>
+                <li><a href="/vendedor">Perfil do vendedor</a></li>
+                <li class="btnlogin"><a href="/cliente">Perfil do Cliente</a></li>
+                <li class="btnlogin"><a href="/loginCliente">Login</a></li>
+                <li class="btncadastrar"><a href="/cadastrar">Cadastrar</a></li>
+                <li class="carrinho"><a href=""><img src="/static/arquivos/carrinho.png" alt=""><span class="text">Carrinho</span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="busca">
+        <h2>Pesquisar Produtos</h2>
+        <form>
+            <input type="text"  id="campo-busca" placeholder="Pesquise por nome, categoria ou palavra-chave">
+            <button type="submit">Buscar</button>
+        </form>
+
+
+    </section>
+    <section id="destaque" class="destaque">
+        <h2>Produtos em destaque mais vendido</h2>
+        <div class="produtos">
+            <!-- aqui vamos colocar os produtos em destaque -->
+
+        </div>
+
+    </section>
+    <section id="produtos" >
+        <h2>Todos os produtos</h2>
+        <div class="produtos">
+            <!-- aqui vamos colocar todos os produtos -->
+
+            {% for vendedor in listaDeVendedor %}
+                {% if vendedor['produtos'] %}
+                    {% for produto, dados in vendedor['produtos'].items() %}
+                        <div id="produtos">
+                            <img src="{{url_for('static', filename='produtos/'+ dados['imagem'] )}}" alt="imagem do produto:{{produto}}" width="200">
+                            <h2>{{produto}}</h2>
+                            <p>{{dados['descricao']}}</p>
+                            <p>Preço: R$ {{dados['preco']}}</p>
+                            <p>Vendedor: {{vendedor['nome']}}</p>
+                        </div>
+
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+
+
+
+
+
+
+
+
+        </div>
+
+    </section>
+    <footer>
+        <p> &copy; 2023 Mercado do Igor Keven </p>
+    </footer>
+
+</body>
+</html>

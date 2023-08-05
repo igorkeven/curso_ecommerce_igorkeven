@@ -1,0 +1,149 @@
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+}
+
+header {
+    height: 30px;
+}
+
+#alerta{
+    text-align: center;
+    background: yellow;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    height: 30px;
+    width: 100%;
+    position: fixed;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #666;
+}
+
+.carrinho{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 7%;
+}
+
+.carrinho:hover img{
+    position: absolute;
+    top: 0;
+    right: -40;
+}
+
+.carrinho:hover .text {
+    display: inline-block;
+}
+
+.text {
+    display: none;
+    padding: 5px;
+    border-radius: 5px;
+    top: 20px;
+    right: 0px;
+    z-index: 1;
+    font-size: 18px;
+    white-space: nowrap;
+    cursor: pointer;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+}
+
+#busca {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+#busca h2{
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+#busca button[type="submit"]{
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#campo-busca {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    font-size: 16px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.produtos {
+    margin: 5% auto 10% auto;
+    text-align: center;
+}
+
+.produto {
+    display: inline-block;
+    width: 25%;
+
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+form input[type="submit"]:hover {
+background-color: #0059b3;
+
+
+}
